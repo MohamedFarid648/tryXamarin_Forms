@@ -1,0 +1,3 @@
+﻿1.StackLayout
+2.Instgram
+3.RelativeLayout  or 3.MasterDetailed

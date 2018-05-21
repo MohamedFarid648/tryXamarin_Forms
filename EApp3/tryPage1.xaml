@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EApp3.tryPage1">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding Source={x:Reference MySlider}}">
+            <!--We use Binding Source={x:Reference MySlider} because We use this reference on multiple elements and may be in multiple properties-->
+            <StackLayout Orientation="Horizontal">
+
+
+
+                <Button Text="Next" x:Name="btnNext"  Clicked="OnNextClick"></Button>
+                <Button Text="Prev" x:Name="btnPrev" Clicked="OnPrevClick" ></Button>
+
+
+            </StackLayout>
+
+
+            <!-- If we didn't use BindingContext we use:
+            
+            <Label Text="{Binding Source={x:Reference MySlider},Path=Value,StringFormat='Font is :{0}'}" x:Name="SliderValue" 
+            
+            -->
+            <Label Text="{Binding Value,StringFormat='Font is :{0}'}" x:Name="SliderValue" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+
+
+            <Label Text="Choose Size:" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+            <Slider  Maximum="28" Minimum="13" Value="15" x:Name="MySlider"></Slider>
+
+
+
+            <Label Text="Question:"  FontSize="15"
+           VerticalOptions="Fill" 
+           HorizontalOptions="Fill" />
+
+            <Label Text=""  x:Name="QuestionLabel" FontSize="{Binding Value}"
+           VerticalOptions="Fill" 
+           HorizontalOptions="Fill" BackgroundColor="SkyBlue" />
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

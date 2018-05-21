@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EApp3.StackLayout" BackgroundColor="Blue"
+             Title="Login"
+             >
+    <ContentPage.Content>
+        <StackLayout  
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Fill" 
+                     Spacing="20">
+  
+
+            <Label Text="Welcome to Xamarin" FontSize="Large" FontAttributes="Bold" TextColor="White"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="Name" Placeholder="Enter Your Name Please"/>
+            <Entry x:Name="Pass" IsPassword="True" Placeholder="Enter Your Password Please"/>
+            
+            <Label Text="Cross-platform apps made easy" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+            <Button Text="Login" BackgroundColor="SkyBlue" VerticalOptions="Center" HorizontalOptions="Fill" TextColor="White" Clicked="Button_Clicked"/>
+            <Button Text="Register" BackgroundColor="SkyBlue" VerticalOptions="Center" HorizontalOptions="Fill" TextColor="White"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

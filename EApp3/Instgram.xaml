@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EApp3.Instgram"
+             Title="Welcome"
+             NavigationPage.HasBackButton="False"
+             >
+    <ContentPage.Content>
+        <FlexLayout Direction="Column"
+                    
+                    JustifyContent="SpaceEvenly"
+
+                    
+                    >
+
+            <Label  x:Name="UserName"/>
+            <!--
+            http://images.all-free-download.com/images/graphiclarge/butterfly_flower_01_hd_pictures_166973.jpg
+            -->
+            <Image Source="http://lorempixel.com/1920/1080/nature/3/"  BackgroundColor="Gray"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Like" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="SkyBlue"/>
+                <Label Text="Comment" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="SkyBlue"/>
+                <Label Text="Share" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="SkyBlue"/>
+            </StackLayout>
+
+            <BoxView HeightRequest="1" Color="#f0f0f0"/><!--To Draw Horizontal Line-->
+            <Label Text="7000 Likes" FontSize="Large"/>
+            <Label LineBreakMode="WordWrap" Text="This is a shot yesterday in Cairo , Giza, when driving home, from a couple of days of work in Egypt"/>
+
+            <Button Text="Back" FlexLayout.AlignSelf="Center" Clicked="BackButtonClick"/>
+            <Button Text="Go to RelativeLayout" FlexLayout.AlignSelf="Center" Clicked="GotoRelativeLayoutButton"/>
+            <Button Text="Go to MasterDetailed" FlexLayout.AlignSelf="Center" Clicked="GotoMasterDetailedButton"/>
+            <Button Text="Go to AbsoluteLayout" FlexLayout.AlignSelf="Center" Clicked="GotoAbsoluteLayoutButton"/>
+            <Button Text="Go to GridLayout" FlexLayout.AlignSelf="Center" Clicked="GotoGridLayoutButton"/>
+            <Button Text="Go to Tabbed Page" FlexLayout.AlignSelf="Center" Clicked="GotoTabbedPageButton"/>
+
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

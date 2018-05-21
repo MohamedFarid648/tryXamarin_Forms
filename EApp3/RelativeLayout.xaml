@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EApp3.RelativeLayout">
+    <ContentPage.Content>
+        <RelativeLayout>
+
+            <!-- Will be the background of first stack All width ,1/3 Height of the parent(window)-->
+            <BoxView  Color="#f7f7f7" 
+                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height ,Factor=0.3}"
+                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+            
+            <StackLayout  x:Name="FirstLayout"  Spacing="10" Padding="30"
+                RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height ,Factor=0.3}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                
+                >
+
+                <Label Text="$11.95"
+                       TextColor="#33353a"
+                       FontSize="60"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center"  />
+               
+                <Button Text="Add $7.99 credit"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        BackgroundColor="#1695A3"
+                        BorderRadius="15"
+                        HeightRequest="50"
+                        FontSize="15"
+                        FontAttributes="Bold"
+                        
+                        />
+
+            </StackLayout>
+
+            <!--YConstraint( Make it in Y after FirstLayout_Height+30,then make the width like the parent -->
+            <StackLayout   HorizontalOptions="Fill"  HeightRequest="100"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=FirstLayout, Property=Height ,Factor=1,Constant=30}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+               >
+                <Label Text="Why pay for credit?" 
+                 VerticalOptions="CenterAndExpand" 
+                 HorizontalOptions="CenterAndExpand"
+                 FontSize="15"
+                 FontAttributes="Bold"
+                       
+                 />
+                <Label Text="Because you can reach people who aren't on SkyApp by calling mobile and landline numbers, or spending SMS at low-cost rates"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                 FontSize="13"
+                 />
+                
+            </StackLayout>
+        </RelativeLayout>
+     
+    </ContentPage.Content>
+</ContentPage>

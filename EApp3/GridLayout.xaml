@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EApp3.GridLayout">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" JustifyContent="SpaceEvenly">
+            <Label  x:Name="Result"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="Fill"  />
+
+            
+            <FlexLayout x:Name="MySecondFlexLayout" Wrap="Wrap">
+     
+            </FlexLayout>
+
+            <Grid>
+                <Button Text="1"  Grid.Row="0" Grid.Column="0"  Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+                <Button Text="2"  Grid.Row="0" Grid.Column="1"  Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+                <Button Text="3"  Grid.Row="0" Grid.Column="2"  Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+              
+                <Button Text="4"  Grid.Row="1" Grid.Column="0"  Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+                <Button Text="5"  Grid.Row="1" Grid.Column="1"  Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+                <Button Text="6"  Grid.Row="1" Grid.Column="2"  Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+
+                <Button Text="7"  Grid.Row="2" Grid.Column="0"  Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+                <Button Text="8"  Grid.Row="2" Grid.Column="1"  Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+                <Button Text="9"  Grid.Row="2" Grid.Column="2"  Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+
+                <Button Text="0"  Grid.Row="3" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand" Clicked="NumberButtonClick" BorderRadius="2" BackgroundColor="White" TextColor="Black"/>
+
+            </Grid>
+            <Button Text="Calculate" FlexLayout.AlignSelf="Center" Clicked="CalculateButtonClick" BorderRadius="2" BackgroundColor="YellowGreen"/>
+
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
