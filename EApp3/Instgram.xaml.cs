@@ -63,5 +63,11 @@ namespace EApp3
             await Navigation.PushAsync(new EApp3.TabbedPage1());
 
         }
+
+        private async void GotoPDFPageButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new  tryPDF());
+
+        }
     }
 }
