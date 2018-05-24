@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EApp3.tryListview" Title="Companies">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView  x:Name="MyListView" HasUnevenRows="True" ><!--To don't make words be under the line-->
+                <!--SeparatorColor="Blue" ,,SelectedItem="SelectedItem_Method"-->
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <!--<TextCell Text="{Binding Name}" Detail="{Binding Description}"></TextCell>
+                        <ImageCell  ImageSource="http://lorempixel.com/100/100/people/2" TextColor="Black" DetailColor="Gray" Text="{Binding Name}" Detail="{Binding Description}"></ImageCell>
+                        -->
+                        <!-- For Custom Template:-->
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+
+
+                                <Image Source="{Binding ImageURL}" ></Image>
+
+
+                                <StackLayout HorizontalOptions="StartAndExpand"  >
+                                    <!--StartAndExpand to fill it's space and other available space around it-->
+                                    <Label Text="{Binding Name}" FontSize="Medium"></Label>
+                                    <Label Text="{Binding Description}" ></Label>
+
+                                </StackLayout>
+
+                                <Button FontSize="Medium"  Text="{Binding ReportPrice ,StringFormat='Get Report ({0})$'}" BackgroundColor="Blue"  TextColor="White" BorderRadius="8"></Button>
+                                
+                                 
+                            </StackLayout>
+                           
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+      
+    </ContentPage.Content>
+</ContentPage>
