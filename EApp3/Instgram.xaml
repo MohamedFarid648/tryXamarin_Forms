@@ -35,6 +35,9 @@
             <Button Text="Go to GridLayout" FlexLayout.AlignSelf="Center" Clicked="GotoGridLayoutButton"/>
             <Button Text="Go to Tabbed Page" FlexLayout.AlignSelf="Center" Clicked="GotoTabbedPageButton"/>
             <Button Text="Go to PDF Page" FlexLayout.AlignSelf="Center" Clicked="GotoPDFPageButton"/>
+            <Button Text="Go to ListView Page" FlexLayout.AlignSelf="Center" Clicked="GotoListViewPageButton"/>
+
+
 
 
         </FlexLayout>

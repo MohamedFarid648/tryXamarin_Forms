@@ -69,5 +69,11 @@ namespace EApp3
             await Navigation.PushAsync(new  tryPDF());
 
         }
+
+        private async void GotoListViewPageButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new tryListview());
+
+        }
     }
 }
